@@ -1,11 +1,11 @@
 import mongoose,{ConnectionOptions} from 'mongoose';
 import config from "./config";
-
 (async()=>{
     try{
         const mongooseOptions:ConnectionOptions={
             useUnifiedTopology: true,
             useNewUrlParser:true,
+            useFindAndModify:false,
             //user:config.MONGO_USER,
             //pass:config.MONGO_PASSWORD
         }
@@ -15,3 +15,4 @@ import config from "./config";
         console.log(error);
     }
 })()
+

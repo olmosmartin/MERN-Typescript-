@@ -8,9 +8,9 @@ router.get('/videos/:id', videoControler.getVideo);
 
 router.post('/videos', videoControler.createVideo);
 
-router.delete('/videos', videoControler.deleteVideo);
+router.delete('/videos/:id', videoControler.deleteVideo);
 
-router.put('/videos', videoControler.updateVideo);
+router.put('/videos/:id', videoControler.updateVideo);
 
 
 
