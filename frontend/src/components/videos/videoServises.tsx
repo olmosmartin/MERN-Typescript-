@@ -8,6 +8,10 @@ export const getVideos =async ()=>{
     return data;
 }
 
+export const getVideo =async (id:string)=>{
+    return await axios.post(`http://localhost:3000/videos/${id}`);
+}
+
 export const crearVideo =async (video:IVideo)=>{
     return await axios.post("http://localhost:3000/videos", video);
 }
