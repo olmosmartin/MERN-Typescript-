@@ -1,9 +1,9 @@
 interface Video{
-    _id:string
+    _id?:string
     titulo:string;
-    description:string;
+    descripcion:string;
     url:string;
-    createdAt:String;
-    updateAt:string;
+    createdAt?:String;
+    updateAt?:string;
 }
 export default Video;

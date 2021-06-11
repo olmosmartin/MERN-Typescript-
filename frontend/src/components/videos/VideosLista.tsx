@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import IVideo from "../../interface/video";
 import * as videoServises from "./videoServises";
+import VideoCard from "./VideoCard";
 //import getVideos from "./videoServises"
 
 const VideosLista = ()=> {
@@ -22,10 +23,8 @@ const VideosLista = ()=> {
     return (
         <div>
             videos:
-            {videos.map(video=>{
-                return <div>
-                    {video.titulo}
-                </div>
+            {videos.map((video)=>{
+                return <VideoCard video={video}/>
             })}
         </div>
     )
