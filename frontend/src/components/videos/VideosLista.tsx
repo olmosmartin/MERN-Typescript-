@@ -8,7 +8,30 @@ const VideosLista = ()=> {
 
     const cargarVideos=async()=>{
         const res= await videoServises.getVideos();
-        setVideos(res);
+
+/*
+        const videosOrdenados = res.data.map(video=>{
+            return{
+                ...video,
+                createdAt: video.createdAt ? new Date(video.createdAt):new Date(),
+                updateAt: video.updateAt ? new Date(video.updateAt):new Date(),
+            }
+        }).sort((a,b)=>b.createdAt.getTime() - a.createdAt.getTime());
+
+        setVideos(videosOrdenados);
+        */
+
+        //los odenos por fecha de actualizados
+        const videosOrdenados = res.map((video)=>{
+            return{
+                ...video,
+                //createdAt: video.createdAt ? new Date(video.createdAt):new Date(),
+                updateAt: video.updateAt ? new Date(video.updateAt):new Date()
+            }
+        }).sort((a,b)=>b.updateAt.getTime() - a.updateAt.getTime());
+
+        setVideos(videosOrdenados);
+
     }
 
     useEffect(() => {
@@ -19,7 +42,7 @@ const VideosLista = ()=> {
         <div className="container p-2">
             <div className="row">
                 {videos.map((video)=>{
-                    return <VideoCard video={video}/>
+                    return <VideoCard video={video} key={video._id} recargarVideos={cargarVideos}/>
                 })}
             </div>
         </div>

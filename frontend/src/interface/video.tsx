@@ -3,7 +3,7 @@ interface Video{
     titulo:string;
     descripcion:string;
     url:string;
-    createdAt?:String;
-    updateAt?:string;
+    createdAt?:string | Date;
+    updateAt?:string | Date;
 }
 export default Video;
