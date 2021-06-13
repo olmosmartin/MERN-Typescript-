@@ -7,7 +7,7 @@ import videoRoutes from './routes/videos.route';
 
 //INICIALIZACIONES-------------------------------------------------
 const app = express();
-require('./config/database.ts');
+require('./config/database');
 
 //MIDDLEWARES------------------------------------------
 //app.use(morgan('combined'));

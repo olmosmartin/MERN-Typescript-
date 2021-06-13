@@ -29,7 +29,7 @@ export default function VideoCard({ video, recargarVideos }: Props) {//acá saqu
             //<div className="row">
                 <div className="col-md-4">
                     <div className="card border-light mb-4 video-card" style={{cursor:'pointer', maxWidth: '20rem' }} onClick={clickCard}>
-                        <div className="card-header">{video.titulo} <i className="fas fa-trash-alt d-flex justify-content-end" onClick={(e)=>video._id && eliminar(e,video._id)}></i> </div>
+                        <div className="card-header">{video.titulo} <i className=" d-flex justify-content-end" onClick={(e)=>video._id && eliminar(e,video._id)}>X</i> </div>
                         <div className="card-body">
                             <p className="card-text">{video.descripcion}</p>
                             <div className=""> 

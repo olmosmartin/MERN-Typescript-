@@ -4,6 +4,7 @@
   "description": "api rest",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "build":"tsc",
     "dev":"ts-node-dev src/index.ts"
   },

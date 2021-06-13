@@ -40,7 +40,7 @@ const estadoInicialVacio = {
             }
             
 
-            history.push("/");//lleva al inicio
+            history.push("/videos");//lleva al inicio
         }
 
         const getVideoID = async(id:string)=>{
